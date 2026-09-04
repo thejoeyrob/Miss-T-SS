@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d3559">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Shrubbery Showdown">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Miss Thorne's Shrubbery Showdown</title>
+</head>
+<body>
+<div id="app" class="app-shell">
+  <header class="appbar">
+    <button class="brand-button" id="homeBtn" aria-label="Home">
+      <img src="app-logo.png" alt="" class="brand-icon">
+      <span class="brand-copy"><b>Miss Thorne's</b><strong>Shrubbery Showdown</strong><small>Year 4 Classroom Challenge</small></span>
+    </button>
+    <div class="appbar-actions">
+      <button class="icon-btn" id="soundBtn" title="Sound" aria-label="Turn sound on or off">🔊</button>
+      <button class="icon-btn" id="fullBtn" title="Full screen" aria-label="Enter or exit full screen">⛶</button>
+      <button class="icon-btn" id="helpBtn" title="Help" aria-label="Open how to play">?</button>
+    </div>
+  </header>
+
+  <main id="view" class="view" aria-live="polite"></main>
+
+  <footer class="footerbar">
+    <span>★ Be Respectful</span><span>♥ Be Ready</span><span>🌿 Be Your Best</span>
+    <span class="footer-quote">“Small steps, big achievements.” — Miss Thorne</span>
+  </footer>
+</div>
+
+<div id="modal" class="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><h2 id="modalTitle"></h2><button class="modal-x" id="modalClose" aria-label="Close">×</button></div>
+    <div id="modalBody" class="modal-body"></div>
+    <div id="modalActions" class="modal-actions"></div>
+  </div>
+</div>
+
+<div id="reaction" class="reaction" aria-live="assertive">
+  <img id="reactionImg" src="miss-thorne-correct.png" alt="Miss Thorne">
+  <div class="reaction-bubble"><b id="reactionTitle">Brilliant!</b><span id="reactionText">Great work.</span></div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
